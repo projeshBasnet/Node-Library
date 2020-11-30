@@ -1,0 +1,27 @@
+@import 'shared/fonts.css';
+@import 'shared/variables.css';
+@import 'shared/header.css';
+@import 'shared/body.css';
+@import 'shared/buttons.css';
+@import 'shared/forms.css';
+@import 'shared/books.css';
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:linear-gradient(to right,var(--color-background-dark),var(--color-background-light));
+    color: var(--main-text-color);
+}
+
+.container{
+    
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+.inner-container{
+    margin: 0 2rem;
+}
+
+.err-message{
+    color: hsl(var(--color-danger-hue),100%,50%);
+}

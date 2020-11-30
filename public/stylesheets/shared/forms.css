@@ -1,0 +1,71 @@
+:root{
+    --form-label-color:hsl(var(--color-base-hue),100%,50%);
+    --form-label-font-size:1rem;
+    --form-input-background-color:hsl(var(--color-base-hue),100%,40%);
+    --form-input-font-color:hsl(var(--color-base-hue),100%,85%);
+    --form-input-border-color:hsl(var(--color-base-hue),100%,73%);
+    --form-input-border-color-focus:hsl(var(--color-base-hue),100%,89%);
+
+}
+ 
+.form-row{
+    display: flex;
+
+}
+
+.form-item{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
+
+}
+.form-item:first-child{
+    margin-left: 0;
+}
+.form-item > label{
+    color:var(--form-label-color);
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+    font-size: var(--form-label-font-size);
+
+}
+
+.form-item > input,.form-item > textarea,.form-item > select
+{
+    background:var(--form-input-background-color);
+    padding: .5rem .25rem;
+    border:1px solid var(--form-input-border-color);
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--form-input-font-color);
+    outline: none;
+}
+
+.form-item > input:focus, .form-item > textarea:focus,.form-item > select:focus{
+    border-color: var(--form-input-border-color-focus);
+}
+.form-item >select>option{
+    background-color: black;
+}
+.form-item textarea{
+    height: 100%;
+    resize: none;
+}
+.filepond--root{
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.filepond--panel-root{
+    background-color: var(--form-input-background-color);
+    border:1px solid var(--form-input-border-color);
+
+}
+.filepond--drop-label{
+    color:  var(--form-input-font-color);
+    font-size: inherit;
+
+}  
+.form-no-grow {
+    flex-grow: 0;
+}

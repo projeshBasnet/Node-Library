@@ -1,0 +1,6 @@
+<h2 class="title-header">Recently Added</h2>
+<% if(books.length == 0){ %>
+    <h2>There are no books to display</h2>
+<% } else { %>
+    <%- include('./partials/bookgrid',{books: books, large:true }) %>
+<% } %>

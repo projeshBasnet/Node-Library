@@ -1,0 +1,61 @@
+:root{
+    --book-cover-width:200px;
+    --book-cover-width-large:300px;
+    --book-cover-aspect-ratio:0.75;
+
+}
+.book-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,var(--book-cover-width));
+    grid-gap: 2rem;
+    justify-content: center;
+}
+.book-cover{
+    width: var(--book-cover-width);
+    height: calc(var(--book-cover-width)/var(--book-cover-aspect-ratio));
+
+}
+
+.book-cover-large{
+    width: var(--book-cover-width-large);
+    height: calc(var(--book-cover-width-large)/var(--book-cover-aspect-ratio));
+}
+
+.book-grid-large{
+    grid-template-columns: repeat(auto-fill,var(--book-cover-width-large));
+
+}
+
+.book-detail{
+    display: flex;
+}
+
+.book-detail-information{
+    margin-left: 2rem;   
+    display: grid;
+    align-content: flex-start;
+    align-items: center;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto ;
+}
+.book-details-label{
+     font-size: 1.2rem;
+     font-weight:500;
+     align-self: flex-start;
+
+}
+.book-info-items{
+    display: flex;
+}
+
+.book-detail-button-wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: .5rem;
+    align-items: flex-end;
+    align-content: center;
+    margin: 0 auto;
+}
+.book-detail-button-wrapper a{
+    text-align: center;
+}

@@ -1,0 +1,8 @@
+<h3>Updating the Book Info</h3>
+<form action="/books/<%= book.id %>?_method=PUT" method="POST">
+<%- include('./partials/_form') %>
+<div class="form-row btn-row">
+<button type="submit" class="btn btn-primary">Update</button>
+<a href="/books/<%= book.id %>" class="btn btn-danger">Cancel</a>
+</div>
+</form>

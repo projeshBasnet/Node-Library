@@ -1,0 +1,19 @@
+<h3>Displaying Each Author Information</h3>
+<form action="/authors/<%= author.id %>?_method=PUT" method="POST">
+    <div class="form-row">
+        <div class="form-item">
+            <label for="name">Author Name</label>
+            <input type="text" id="name" value="<%= author.name %>" name="name">
+        </div>
+
+        <div class="btn-row">
+            <button type="submit" class="btn btn-primary">Update Author</button>
+            <a href="/authors" class="btn btn-danger">Cancel</a>
+        </div>
+    </div>
+</form>
+
+<% if(books.length>0) {%>
+<h2>Books written by author are</h2>
+<%- include('../partials/bookgrid',{ books : books}) %>
+<% } %>

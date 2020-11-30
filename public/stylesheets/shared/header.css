@@ -1,0 +1,44 @@
+:root{
+    --title-font-size:2rem;
+    --title-font-weight:bold;
+    --nav-link-font-weight:600;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.list-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.list-container a{
+    color: var(--main-text-color);
+}
+.header-title{
+    font-size: var(--title-font-size);
+    font-weight: var(--title-font-weight);
+}
+.header-title>a{
+    color: var(--main-text-color);
+    font-weight: var(--nav-link-font-weight);
+
+}
+.list-item{
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li a:hover,.header-title>a:hover{
+    color: white;
+}
+
+
+

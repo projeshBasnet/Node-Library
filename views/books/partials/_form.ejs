@@ -1,0 +1,39 @@
+<div class="form-row">
+    <div class="form-item">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="<%= book.title %>">
+    </div>
+    <div class="form-item">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10"><%= book.description %></textarea>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-item">
+        <label for="pubdate">Publish Date</label>
+        <input type="date" name="pubdate" id="pubdate"
+            value="<%= book.publishdate == null ? '' : book.publishdate.toISOString().split('T')[0] %>">
+    </div>
+   
+    <div class="form-item">
+        <label for="author">Author</label>
+        <select name="author" id="author">
+            <% authors.forEach(author => { %>
+            <% if (author.id == book.author) { %>
+            <option selected label="<%= author.name %>" value="<%= author.id %>">
+                <% } else { %>
+            <option label="<%= author.name %>" value="<%= author.id %>">
+                <% } %>
+                <% }) %>
+
+        </select>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item form-no-grow">
+        <label for="cover">Image</label>
+        <input type="file" name="cover" id="cover" class="book-cover-large filepond">
+    </div>
+</div>
+

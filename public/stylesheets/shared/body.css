@@ -1,0 +1,16 @@
+.list-data{
+    list-style: none;
+    
+}
+.list-data>a{
+    color: var(--main-text-color);
+}
+
+#name{
+    display: block;
+    margin-bottom: 1rem;
+}
+.author-row{
+    display: flex;
+    justify-content: space-between;
+}
