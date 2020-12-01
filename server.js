@@ -1,4 +1,4 @@
- if(process.env.NODE_ENV != 'production'){
+ if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
 const express = require('express')
@@ -19,6 +19,7 @@ app.use(expressLayout)
 app.use(methodoverride('_method'))
 
 // setting mongoose connection
+
 mongoose.connect(process.env.DATABASE_URL, { useUnifiedTopology:true, useNewUrlParser:true })
 const db = mongoose.connection
 db.on('error',error=> console.error(error))
