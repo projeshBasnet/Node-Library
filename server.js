@@ -19,7 +19,7 @@ app.use(expressLayout)
 app.use(methodoverride('_method'))
 
 // setting mongoose connection
-mongoose.connect(process.env.CONNECTION_URL, { useUnifiedTopology:true, useNewUrlParser:true })
+mongoose.connect(String(process.env.DATABASE_URL), { useUnifiedTopology:true, useNewUrlParser:true })
 const db = mongoose.connection
 db.on('error',error=> console.error(error))
 db.once('open',()=> console.log('Connected to mongoose')
